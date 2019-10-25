@@ -1,0 +1,121 @@
+db.produto_servico.insertOne({
+    "_id": "c1382a",
+    "nomeps": "caneta azul",
+    "tipo": "produto",
+    "valorps": 0.50,
+    "naturezaps": "produto escritorio",
+    "tamanho": NumberInt(1),
+    "modelo": "1382",
+    "cor": "azul"
+});
+
+db.produto_servico.insertOne({
+    "_id": "c1382p",
+    "nomeps": "caneta preta",
+    "tipo": "produto",
+    "valorps": 0.50,
+    "naturezaps": "produto escritorio",
+    "tamanho": NumberInt(1),
+    "modelo": "1382",
+    "cor": "preta"
+});
+
+db.produto_servico.insertOne({
+    "_id": "limp004",
+    "nomeps": "servico de limpeza",
+    "tipo": "servico",
+    "valorps": 189.00,
+    "naturezaps": "servico geral",
+    "tamanho": NumberInt(1),
+    "modelo": "null",
+    "cor": "null"
+});
+
+db.produto_servico.insertOne({
+    "_id": "cop1120",
+    "nomeps": "servico de copias/impressao",
+    "tipo": "servico",
+    "valorps": 0.10,
+    "naturezaps": "material escritorio",
+    "tamanho": NumberInt(1),
+    "modelo": "null",
+    "cor": "null"
+});
+
+db.produto_servico.insertOne({
+    "_id": "manpcs",
+    "nomeps": "servico de manutencao de pcs",
+    "tipo": "servico",
+    "valorps": 54.00,
+    "naturezaps": "servico geral",
+    "tamanho": NumberInt(1),
+    "modelo": "null",
+    "cor": "null"
+});
+
+db.produto_servico.insertOne({
+    "_id": "cad3342p",
+    "nomeps": "Cadeira de escritorio",
+    "tipo": "produto",
+    "valorps": 376.00,
+    "naturezaps": "produto escritorio",
+    "tamanho": NumberInt(1),
+    "modelo": "3342",
+    "cor": "preta"
+});
+
+db.produto_servico.insertOne({
+    "_id": "mes3432m",
+    "nomeps": "mesa de escritorio",
+    "tipo": "produto",
+    "valorps": 403.00,
+    "naturezaps": "produto escritorio",
+    "tamanho": NumberInt(160),
+    "modelo": "3432",
+    "cor": "marrom",
+});
+
+db.produto_servico.insertOne({
+    "_id": "bft500",
+    "nomeps": "servico de buffet para 500 pessoas",
+    "tipo": "servico",
+    "valorps": 4200.00,
+    "naturezaps": "servico geral",
+    "tamanho": NumberInt(500),
+    "modelo": "null",
+    "cor": "null"
+});
+
+db.produto_servico.insertOne({
+    "_id": "lab455521",
+    "nomeps": "tubo de ensaio",
+    "tipo": "produto",
+    "valorps": 3.00,
+    "naturezaps": "produto de laboratorio",
+    "tamanho": NumberInt(1),
+    "modelo": "455521",
+    "cor": "null"
+});
+
+db.produto_servico.insertOne({
+    "_id": "lab47865",
+    "nomeps": "microscopio simples",
+    "tipo": "produto",
+    "valorps": 829.00,
+    "naturezaps": "produto de laboratorio",
+    "tamanho": NumberInt(1),
+    "modelo": "47865",
+    "cor": "prata"
+});
+
+db.produto_servico.insertOne({
+    "_id": "pc824211",
+    "nomeps": "computador para laboratorio",
+    "tipo": "produto",
+    "valorps": 1000.00,
+    "naturezaps": "produto de laboratorio",
+    "tamanho": NumberInt(1),
+    "modelo": "824211",
+    "cor": "preto"
+});
+

@@ -1,0 +1,165 @@
+use compras;
+
+db.fornecedor.insertOne({
+    "_id": "0200300300402",
+    "identificacao": "master canetas",
+    "endereco": {
+        "bairro": "centro",
+        "uf": "ba",
+        "cep": "45000000",
+        "cidade": "vitoria da conquista",
+        "logradouro": "rua do triunfo",
+        "numero": NumberInt(888)
+    },
+    "telefone": [
+        "7734432234"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "4432296300122",
+    "identificacao": "limpabem servicos",
+    "endereco": {
+        "bairro": "zabele",
+        "uf": "ba",
+        "cep": "45243222",
+        "cidade": "vitoria da conquista",
+        "logradouro": "rua N",
+        "numero": NumberInt(13)
+    },
+    "telefone": [
+        "7730323454",
+        "7785463232"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "8182283980012",
+    "identificacao": "brasil copiadora",
+    "endereco": {
+        "bairro": "brasil",
+        "uf": "ba",
+        "cep": "45000000",
+        "cidade": "vitoria da conquista",
+        "logradouro": "av. maceio",
+        "numero": NumberInt(356)
+    },
+    "telefone": [
+        "7734218163"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "7869786944553",
+    "identificacao": "max moveis",
+    "endereco": {
+        "bairro": "centro",
+        "uf": "ba",
+        "cep": "45250000",
+        "cidade": "boa nova",
+        "logradouro": "rua bento alexandre messeder",
+        "numero": NumberInt(10)
+    },
+    "telefone": [
+        "7734332285",
+        "7734335446"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "8475928613000",
+    "identificacao": "multipaper papelaria",
+    "endereco": {
+        "bairro": "candeias",
+        "uf": "ba",
+        "cep": "45028275",
+        "cidade": "vitoria da conquista",
+        "logradouro": "av. franklin ferraz",
+        "numero": NumberInt(80)
+    },
+    "telefone": [
+        "7788453545"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "1342423100010",
+    "identificacao": "abilio escritorio",
+    "endereco": {
+        "bairro": "cruzeiro",
+        "uf": "sp",
+        "cep": "23000120",
+        "cidade": "taubate",
+        "logradouro": "av. contorno",
+        "numero": NumberInt(1123)
+    },
+    "telefone": [
+        "11954453223"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "1323013400110",
+    "identificacao": "teclab laboratorio",
+    "endereco": {
+        "bairro": "centro",
+        "uf": "ba",
+        "cep": "45000234",
+        "cidade": "anagé",
+        "logradouro": "praca da bandeira",
+        "numero": NumberInt(15)
+    },
+    "telefone": [
+        "7734211234",
+        "7734211235"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "3342231120001",
+    "identificacao": "resolveTI servicos",
+    "endereco": {
+        "bairro": "centro",
+        "uf": "ba",
+        "cep": "45000000",
+        "cidade": "vitoria da conquista",
+        "logradouro": "av. vivaldo mendes",
+        "numero": NumberInt(122)
+    },
+    "telefone": [
+        "7799455432"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "9988778890909",
+    "identificacao": "tecno empresarial",
+    "endereco": {
+        "bairro": "brasil",
+        "uf": "ba",
+        "cep": "45000000",
+        "cidade": "vitoria da conquista",
+        "logradouro": "av. macaubas",
+        "numero": NumberInt(345)
+    },
+    "telefone": [
+        "7722321965"
+    ]
+});
+
+db.fornecedor.insertOne({
+    "_id": "7675322122215",
+    "identificacao": "buffet da ostentacao",
+    "endereco": {
+        "bairro": "centro",
+        "uf": "ba",
+        "cep": "45000000",
+        "cidade": "vitoria da conquista",
+        "logradouro": "praca da bandeira",
+        "numero": NumberInt(445)
+    },
+    "telefone": [
+        "7734233247"
+    ]
+});
+

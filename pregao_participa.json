@@ -1,0 +1,121 @@
+db.pregao.insertOne({
+    "_id": "2012008",
+    "status": "concluido",
+    "observacao": "",
+    "data_abertura": ISODate('2012-07-09'),
+    "data_vencimento": ISODate('2012-08-10'),
+    "setor_id": "den",
+    "participa": [{
+            "fornecedor_id": "0200300300402",
+            "status": "ganhador",
+            "data_participacao": ISODate('2013-07-10')
+        },
+        {
+            "fornecedor_id": "8475928613000",
+            "status": "perdedor",
+            "data_participacao": ISODate('2013-07-22')
+        },
+        {
+            "fornecedor_id": "1342423100010",
+            "status": "perdedor",
+            "data_participacao": ISODate('2013-07-24')
+        }
+    ]
+});
+
+db.pregao.insertOne({
+    "_id": "2013445",
+    "status": "cancelado",
+    "observacao": "cancelado por nao ter tempo habil",
+    "data_abertura": ISODate('2013-08-10'),
+    "data_vencimento": ISODate('2013-08-15'),
+    "setor_id": "crs",
+});
+
+db.pregao.insertOne({
+    "_id": "20130028",
+    "status": "concluido",
+    "observacao": "",
+    "data_abertura": ISODate('2013-09-09'),
+    "data_vencimento": ISODate('2013-12-31'),
+    "setor_id": "dir",
+    "participa": [{
+        "fornecedor_id": "7675322122215",
+        "status": "ganhador",
+        "data_participacao": ISODate('2013-09-15')
+    }]
+});
+
+db.pregao.insertOne({
+    "_id": "20130054",
+    "status": "concluido",
+    "observacao": "",
+    "data_abertura": ISODate('2013-08-30'),
+    "data_vencimento": ISODate('2013-09-15'),
+    "setor_id": "man",
+    "participa": [{
+        "fornecedor_id": "4432296300122",
+        "status": "ganhador",
+        "data_participacao": ISODate('2013-08-30')
+    }]
+});
+
+db.pregao.insertOne({
+    "_id": "20140023",
+    "status": "concluido",
+    "observacao": "",
+    "data_abertura": ISODate('2014-02-05'),
+    "data_vencimento": ISODate('2014-03-11'),
+    "setor_id": "csi",
+    "participa": [{
+            "fornecedor_id": "8182283980012",
+            "status": "perdedor",
+            "data_participacao": ISODate('2014-02-07')
+        },
+        {
+            "fornecedor_id": "8475928613000",
+            "status": "ganhador",
+            "data_participacao": ISODate('2014-02-10')
+        },
+        {
+            "fornecedor_id": "3342231120001",
+            "status": "ganhador",
+            "data_participacao": ISODate('2014-02-08')
+        },
+        {
+            "fornecedor_id": "9988778890909",
+            "status": "perdedor",
+            "data_participacao": ISODate('2014-02-07')
+        }
+    ]
+});
+
+db.pregao.insertOne({
+    "_id": "20140123",
+    "status": "concluido",
+    "observacao": "",
+    "data_abertura": ISODate('2014-05-15'),
+    "data_vencimento": ISODate('2014-06-20'),
+    "setor_id": "cpx",
+    "participa": [{
+            "fornecedor_id": "7869786944553",
+            "status": "ganhador",
+            "data_participacao": ISODate('2014-05-20')
+        },
+        {
+            "fornecedor_id": "1342423100010",
+            "status": "perdedor",
+            "data_participacao": ISODate('2014-05-23')
+        }
+    ]
+});
+
+db.pregao.insertOne({
+    "_id": "20148883",
+    "status": "aberto",
+    "observacao": "",
+    "data_abertura": ISODate('2014-11-30'),
+    "data_vencimento": ISODate('2015-06-30'),
+    "setor_id": "csi",
+});
+

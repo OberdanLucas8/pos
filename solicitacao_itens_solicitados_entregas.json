@@ -1,0 +1,205 @@
+db.solicitacao.insertOne({
+    "numero_solicitacao": "6632012",
+    "data_entrega_prevista": ISODate('2012-08-15'),
+    "data_solicitacao": ISODate('2012-05-28'),
+    "doc_solicitacao": "11137627",
+    "status": "entregue",
+    "pedido_descricao": "800 canetas azuis e pretas",
+    "id_siape": "07070707",
+    "itens_solicitacao": [{
+            "ps_id": "c1382a",
+            "pregao_id": "2012008",
+            "quant": NumberInt(400),
+            "entrega": [{
+                    "fornecedor_id": "0200300300402",
+                    "item_solicitado": "c1382a",
+                    "data_entrega": ISODate('2013-08-20'),
+                    "preco": 176,
+                    "quant": NumberInt(400)
+                }]
+            },
+            {
+                "ps_id": "c1382p",
+                "pregao_id": "2012008",
+                "quant": NumberInt(400),
+                "entrega": [{
+                    "fornecedor_id": "0200300300402",
+                    "item_solicitado": "c1382p",
+                    "data_entrega": ISODate('2013-08-20'),
+                    "preco": 176,
+                    "quant": NumberInt(400)
+                }]
+            }
+        ]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "4232013",
+    "data_entrega_prevista": ISODate('2013-04-26'),
+    "data_solicitacao": ISODate('2013-04-12'),
+    "doc_solicitacao": "13893992",
+    "status": "cancelado",
+    "pedido_descricao": "30 cadeiras",
+    "id_siape": "04040404",
+    "itens_solicitacao": [{
+        "ps_id": "cad3342p",
+        "pregao_id": "2013445",
+        "quant": NumberInt(30)
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "6222013",
+    "data_entrega_prevista": ISODate('2013-12-23'),
+    "data_solicitacao": ISODate('2013-06-01'),
+    "doc_solicitacao": "23234244",
+    "status": "entregue",
+    "pedido_descricao": "01 buffet",
+    "id_siape": "10101010",
+    "itens_solicitacao": [{
+        "ps_id": "bft500",
+        "pregao_id": "20130028",
+        "numero_solicitacao": "6222013",
+        "quant": NumberInt(1),
+        "entrega": [{
+            "fornecedor_id": "7675322122215",
+            "item_solicitado": "bft500",
+            "data_entrega": ISODate('2013-12-23'),
+            "preco": 4200,
+            "quant": NumberInt(1)
+        }]
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "8322013",
+    "data_entrega_prevista": ISODate('2013-09-18'),
+    "data_solicitacao": ISODate('2013-08-22'),
+    "doc_solicitacao": "82374274",
+    "status": "entregue",
+    "pedido_descricao": "30 limpezas",
+    "id_siape": "08080808",
+    "itens_solicitacao": [{
+        "ps_id": "limp004",
+        "pregao_id": "20130054",
+        "quant": NumberInt(30),
+        "entrega": [{
+            "fornecedor_id": "4432296300122",
+            "item_solicitado": "limp004",
+            "data_entrega": ISODate('2013-09-10'),
+            "preco": 5670,
+            "quant": NumberInt(30)
+        }]
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "2342014",
+    "data_entrega_prevista": ISODate('2014-03-11'),
+    "data_solicitacao": ISODate('2014-01-25'),
+    "doc_solicitacao": "45998825",
+    "status": "entregue",
+    "pedido_descricao": "43 formatacoes de computadores",
+    "id_siape": "02020202",
+    "itens_solicitacao": [{
+        "ps_id": "cop1120",
+        "pregao_id":"20140023",
+        "quant": NumberInt(43),
+        "entrega": [{
+            "fornecedor_id": "8475928613000",
+            "item_solicitado": "cop1120",
+            "data_entrega": ISODate('2013-03-02'),
+            "preco": 500,
+            "quant": NumberInt(5000)
+        }]
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "3322014",
+    "data_entrega_prevista": ISODate('2014-02-25'),
+    "data_solicitacao": ISODate('2014-01-27'),
+    "doc_solicitacao": "19749733",
+    "status": "entregue",
+    "pedido_descricao": "5000 impressoes ou xerox",
+    "id_siape": "02020202",
+    "itens_solicitacao": [{
+        "ps_id": "manpcs",
+        "pregao_id":"20140023",
+        "quant": NumberInt(5000),
+        "entrega":[{
+            "fornecedor_id": "3342231120001",
+            "item_solicitado": "manpcs",
+            "data_entrega": ISODate('2013-03-20'),
+            "preco": 2322,
+            "quant": NumberInt(43)
+        }]
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "3442014",
+    "data_entrega_prevista": ISODate('2014-06-30'),
+    "data_solicitacao": ISODate('2014-05-13'),
+    "doc_solicitacao": "99248742",
+    "status": "entregue",
+    "pedido_descricao": "14 mesas",
+    "id_siape": "03030303",
+    "itens_solicitacao": [{
+        "ps_id": "mes3432m",
+        "pregao_id":"20140123",
+        "quant": NumberInt(14),
+        "entrega": [{
+            "fornecedor_id": "7869786944553",
+            "item_solicitado": "mes3432m",
+            "data_entrega": ISODate('2014-06-15'),
+            "preco": 6000,
+            "quant": NumberInt(14)
+        }]
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "5332014",
+    "data_entrega_prevista": ISODate('2014-12-11'),
+    "data_solicitacao": ISODate('2014-11-22'),
+    "doc_solicitacao": "14875033",
+    "status": "solicitado",
+    "pedido_descricao": "80 computadores",
+    "id_siape": "02020202",
+    "itens_solicitacao": [{
+        "ps_id": "pc824211",
+        "pregao_id":"20148883",
+        "quant": NumberInt(80)
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "4452014",
+    "data_entrega_prevista": ISODate('2014-09-02'),
+    "data_solicitacao": ISODate('2014-08-18'),
+    "doc_solicitacao": "78234244",
+    "status": "cancelado",
+    "pedido_descricao": "1000 tubos de ensaio",
+    "id_siape": "15161718",
+    "itens_solicitacao":[{
+        "ps_id": "lab455521",
+        "pregao_id":"null",
+        "quant": NumberInt(1000)
+    }]
+});
+
+db.solicitacao.insertOne({
+    "numero_solicitacao": "4732014",
+    "data_entrega_prevista": ISODate('2014-09-14'),
+    "data_solicitacao": ISODate('2014-09-05'),
+    "doc_solicitacao": "28349072",
+    "status": "cancelado",
+    "pedido_descricao": "13 microscopios",
+    "id_siape": "15161718",
+    "itens_solicitacao":[{
+        "ps_id": "lab47865",
+        "pregao_id":"null",
+        "quant": NumberInt(13)
+    }]
+});
