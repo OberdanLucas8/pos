@@ -1,0 +1,85 @@
+1. Quais solicitações de determinado setor estão em aberto? 
+
+db.solicitacao.aggregate([
+    {$lookup:{from:"servidor", localField:"id_siape", foreignField:"_id", as: "servidor"}},
+    {$unwind:"$servidor"},
+    {$unwind:"$servidor.setor"},
+    {$match:{$and: [{"servidor.setor.setor_id": "csi"}, {"status": "solicitado"}]}},
+    {$project: {"numero_solicitacao": 1, "pedido_descricao": 1, "status": 1, "_id": 0}}
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+2.	Quais as solicitações entregues no ano de 2014?
+
+db.solicitacao.aggregate([
+    {$unwind:"$itens_solicitacao"},
+    {$unwind:"$itens_solicitacao.entrega"},
+    {$project:{ano:{$year:"$itens_solicitacao.entrega.data_entrega"}, numero_solicitacao:1}},
+    {$match:{"ano":{$eq:2014}}}
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+3.	Quais os ganhadores dos Pregões nos anos de 2013 e 2014?
+
+db.pregao.aggregate([
+    {$unwind:"$participa"},
+    {$lookup:{from:"fornecedor", localField:"participa.fornecedor_id", foreignField:"_id", as: "nome"}},
+    {$unwind:"$nome"},
+    {$project:{ano:{$year:"$participa.data_participacao"}, "participa.status":1, "nome.identificacao":1}},
+    {$match:{$and:[{"participa.status":"ganhador"}, {ano:{$in:[2013, 2014]}}]}}
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+4.	Quais os pregões que foram concluídos e quais foram cancelados?
+
+db.pregao.find({status:{$in:["concluido", "cancelado"]}}, {numero_processo:1, status:1});
+---------------------------------------------------------------------------------------------------------------------------------------------
+5.	Qual a data de entrega do Produto ao almoxarifado?
+
+var valor = db.produto_servico.find(
+	{"nomeps": "servico de buffet para 500 pessoas"}, {"_id":1 }).next();
+db.solicitacao.find(
+	{"itens_solicitacao.entrega.item_solicitado": valor._id},
+	{"itens_solicitacao.entrega.data_entrega": 1}
+);
+---------------------------------------------------------------------------------------------------------------------------------------------
+6.	Quais pregões estão em aberto?
+
+db.pregao.find(
+{status:"aberto"}, {_id:1, status:1}
+);
+---------------------------------------------------------------------------------------------------------------------------------------------
+7.	Quais os gerentes e seus setores fizeram solicitações?
+
+db.solicitacao.aggregate([
+    {$lookup:{from:"servidor", localField:"id_siape", foreignField:"_id", as: "servidor"}},
+    {$unwind:"$servidor"}, 
+    {$match:{"servidor.cargo": "gerente"}},
+    {$project: {"servidor.nome": 1, "servidor.setor.nome_setor": 1, "_id": 0}}
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+8.	Quais pregões um determinado fornecedor participou, e os seus respectivos resultados?
+
+var valor = db.fornecedor.find({ "identificacao": "multipaper papelaria"}, { "_id": 1 }).next();
+db.pregao.aggregate([
+    {$project:{"participa.fornecedor_id":1, "participa.status":1}},
+    {$unwind:"$participa"},
+    {$match:{"participa.fornecedor_id":valor._id}}
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+9.	Quais os produtos ou serviços foram licitados por um determinado pregão?
+
+db.solicitacao.aggregate([
+    { $unwind: "$itens_solicitacao" },
+    { $unwind: "$itens_solicitacao.entrega" },
+    { $match:  { "itens_solicitacao.pregao_id": "2012008" } },
+    { $lookup: {from:"produto_servico", localField:"itens_solicitacao.ps_id", foreignField:"_id", as: "nome"}},
+    { $unwind: "$nome"},
+    { $project: { "itens_solicitacao.ps_id": 1 , "nome.nomeps":1} }
+]);
+---------------------------------------------------------------------------------------------------------------------------------------------
+10.	Consultar as solicitações que vieram de um determinado setor?
+
+db.solicitacao.aggregate([
+    {$lookup:{from:"servidor", localField:"id_siape", foreignField:"_id", as: "setores"}},
+    {$unwind:"$setores"},
+    {$match:{"setores.setor.setor_id":"csi"}},
+    {$project:{numero_solicitacao:1, _id:0}}
+]);
